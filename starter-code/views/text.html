@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link href="https://cdn.quilljs.com/1.0.0/quill.snow.css" rel="stylesheet" />
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous"
+        />
+        <link
+            href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif|Metal+Mania"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="../style.css" />
+        <title>Text Editor</title>
+    </head>
+    <body>
+        <nav>
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link active" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/gallery">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/text">Write Something</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div>
+            <h1>Write Something</h1>
+
+            <div id="toolbar">
+                <button class="ql-bold">Bold</button>
+                <button class="ql-italic">Italic</button>
+            </div>
+
+            <!-- Create the editor container -->
+            <div id="editor">
+                <p>Hello World!</p>
+            </div>
+
+            <!-- Include the Quill library -->
+            <script src="https://cdn.quilljs.com/1.0.0/quill.js"></script>
+
+            <!-- Initialize Quill editor -->
+            <script>
+                var editor = new Quill("#editor", {
+                    modules: { toolbar: "#toolbar" },
+                    theme: "snow"
+                });
+            </script>
+        </div>
+    </body>
+</html>
